@@ -13,10 +13,20 @@ var shapes = [{
 }, {
 	name: 'Star',
 	system: new LSystem('F', {
-		'F': '+FF',
-		'B': '+[-]B'
+		'F': '+FF'
 	}, 6, 60, 250, .3, {
 		x: window.innerWidth / 2,
+		y: window.innerHeight / 2
+	}, canvas)
+}, {
+	name: 'Bread',
+	system: new LSystem('WV', {
+		'F': 'IFFI',
+		'V': 'V+',
+		'W': 'FF',
+		'I': '[]FIF+F-VI'
+	}, 4, 90, 100, .3, {
+		x: window.innerWidth / 4,
 		y: window.innerHeight / 2
 	}, canvas)
 }, {
